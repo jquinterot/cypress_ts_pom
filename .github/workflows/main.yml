@@ -39,4 +39,4 @@ jobs:
           record: true
           parallel: true
           group: 'UI-Chrome'
-          start: npm run test  # Adjust this based on your project setup
+          start: npm run test --record --key ${{secrets.KEY}} # Adjust this based on your project setup
