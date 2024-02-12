@@ -7,7 +7,7 @@ import { Products } from "../../helpers/enums/Products";
 import { johnInfo } from "../../helpers/objects/CustoemrInfo";
 import { johnCardInfo } from "../../helpers/objects/CardInfo";
 
-describe("@acceptance Check Poke is correctly displayed", () => {
+describe("@acceptance Check place order", () => {
   const homeActions = new HomeActions();
   const productActions = new ProductActions();
   const cartActions = new CartActions();
