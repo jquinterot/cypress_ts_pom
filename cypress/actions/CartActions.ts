@@ -1,3 +1,4 @@
+import { should } from "chai";
 import { CartPage } from "../pages/CartPage";
 
 export class CartActions {
@@ -14,12 +15,13 @@ export class CartActions {
   }
 
   deleteProductFromCard(product: string) {
-    this.cartPage.getDeleteButton().click({ force: true });
-
-    this.cartPage.getAddedProductTitle(product).should("be.visible");
+    this.cartPage.getDeleteButton().click();
+    cy.reload();
+    this.cartPage.getAddedProductTitle(product).should('not.exist');
+  
   }
 
   selectPlaceOrder() {
-    this.cartPage.getPlaceOrderButton().click({ force: true });
+    this.cartPage.getPlaceOrderButton().click();
   }
 }

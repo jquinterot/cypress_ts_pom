@@ -14,7 +14,7 @@ describe("@acceptance Check Poke is correctly displayed", () => {
   const placeOrderActions = new PlaceOrderActions();
 
   beforeEach(() => {
-    cy.visit("");
+    cy.visit('');
   });
 
   it("Check Demoblaze Home Page title should be displayed", () => {
