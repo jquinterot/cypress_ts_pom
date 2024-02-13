@@ -3,6 +3,7 @@ import { CartActions } from "../../actions/CartActions";
 import { ProductActions } from "../../actions/ProductActions";
 import { MenuOptions } from "../../helpers/enums/MenuOptions";
 import { Products } from "../../helpers/enums/Products";
+import { Categories } from "../../helpers/enums/Categories";
 
 describe("@regression Check that a product can be added to the cart", () => {
   const homeActions = new HomeActions();
@@ -14,7 +15,7 @@ describe("@regression Check that a product can be added to the cart", () => {
   });
 
   it("Check that a samsung cellphone can be added", () => {
-    homeActions.selectCategory("Phones");
+    homeActions.selectCategory(Categories.PHONES);
     homeActions.selectProduct(Products.GALAXY_S6);
 
     productActions.checkAddedProduct(Products.GALAXY_S6);

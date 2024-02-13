@@ -1,7 +1,6 @@
-import { HomePage } from "../../pages/HomePage";
 import { HomeActions } from '../../actions/HomeActions';
 
-describe("@acceptance Check Poke is correctly displayed", () => {
+describe("@acceptance Check Demoblaze Home Page title should be displayed", () => {
   const homeActions = new HomeActions();
 
   beforeEach(() => {

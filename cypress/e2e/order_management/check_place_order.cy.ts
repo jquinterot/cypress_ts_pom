@@ -3,6 +3,7 @@ import { CartActions } from "../../actions/CartActions";
 import { ProductActions } from "../../actions/ProductActions";
 import { PlaceOrderActions } from "../../actions/PlaceOrderActions";
 import { MenuOptions } from "../../helpers/enums/MenuOptions";
+import { Categories } from "../../helpers/enums/Categories";
 import { Products } from "../../helpers/enums/Products";
 import { johnInfo } from "../../helpers/objects/CustoemrInfo";
 import { johnCardInfo } from "../../helpers/objects/CardInfo";
@@ -18,7 +19,7 @@ describe("@acceptance Check place order", () => {
   });
 
   it("Check Demoblaze Home Page title should be displayed", () => {
-    homeActions.selectCategory("Phones");
+    homeActions.selectCategory(Categories.PHONES);
     homeActions.selectProduct(Products.GALAXY_S6);
 
     productActions.checkAddedProduct(Products.GALAXY_S6);
